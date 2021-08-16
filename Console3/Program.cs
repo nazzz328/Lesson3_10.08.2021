@@ -20,13 +20,13 @@ namespace Console3
             double discount;
             if (price >= 500 & price < 1000)
             {
-            discount = price * 1.03;
+            discount = price - (price * 0.03);
             System.Console.WriteLine($"The price with discount - {discount} SMN");
             }
 
             else if (price >=1000)
             {
-            discount = price * 1.05;
+            discount = price - (price * 0.05);
             System.Console.WriteLine($"The price with discount - {discount} SMN");
             }
 
@@ -58,41 +58,41 @@ namespace Console3
 
 
 
-            if (num1 < num2 & num1 < num3 & num1 < num4 & num2 < num3 & num2 < num4 & num3 < num4)
-            {
-            System.Console.WriteLine ("Ascending order of numbers");    
-            }
-
-            else if (num1 == num2 & num1 == num3 & num1 == num4 & num2 == num3 & num2 == num4 & num3 == num4)
-
-            {
-            int mult = num1 * num2 * num3 * num4;
-            System.Console.WriteLine ($"Multiplication of numbers: {mult}");
-            }
-
-            else
-
-            {
-                if (num1 < num2 & num1 < num3 & num1 < num4)
+                if (num1 < num2 & num1 < num3 & num1 < num4 & num2 < num3 & num2 < num4 & num3 < num4)
                 {
                 System.Console.WriteLine ($"Minimum value is: {num1}");
                 }
 
-                else if (num2 < num1 & num2 < num3 & num2 < num4)
+                else if (num2 < num1 & num2 < num3 & num2 < num4 & num3 < num4)
                 {
                 System.Console.WriteLine ($"Minimum value is: {num2}");    
                 }
 
-                else if (num3 < num1 & num3 < num2 & num3 < num4)
+                else if (num3 < num1 & num3 < num2 & num3 < num4 & num3 < num4)
                 {
                 System.Console.WriteLine ($"Minimum value is: {num3}");    
                 }
 
                 else if (num4 < num1 & num4 < num3 & num4 < num2)
                 {
-                System.Console.WriteLine ($"Minimum value is: {num4}");    
+                System.Console.WriteLine ($"Minimum value is: {num4}");
                 }
-            }
+          
+
+                else if (num1 == num2 & num1 == num3 & num1 == num4 & num2 == num3 & num2 == num4 & num3 == num4)
+
+                {
+                int mult = num1 * num2 * num3 * num4;
+                System.Console.WriteLine ($"Multiplication of numbers: {mult}");
+                }
+
+                else 
+                {
+                System.Console.WriteLine ("Ascending order of numbers");
+                }
+
+            
+            
 
              System.Console.WriteLine ();
              System.Console.WriteLine ();
